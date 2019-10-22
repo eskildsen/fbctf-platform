@@ -24,7 +24,7 @@ abstract class Model {
       $host = must_have_idx($config, 'MC_HOST');
       $port = must_have_idx($config, 'MC_PORT');
       self::$mc = new Memcached();
-      self::$mc->addServer($host, $port);
+      self::$mc->addServer($host, (int)$port);
     }
     return self::$mc;
   }
