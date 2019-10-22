@@ -100,8 +100,9 @@ class CountryModalController extends ModalController {
                       id="multiple_choice_quiz_choice_A"
                       value="A"
                     />
-                    <label for="multiple_choice_quiz_choice_A">{tr('A')}</label>.
+                    <label for="multiple_choice_quiz_choice_A">
                     <span class="choiceA-text"></span>
+		    </label>
                   </div>
                   <div class="radio-list">
                     <input
@@ -110,8 +111,9 @@ class CountryModalController extends ModalController {
                       id="multiple_choice_quiz_choice_B"
                       value="B"
                     />
-                    <label for="multiple_choice_quiz_choice_B">{tr('B')}</label>.
+                    <label for="multiple_choice_quiz_choice_B">
                     <span class="choiceB-text"></span>
+		    </label>
                   </div>
                   <div class="radio-list">
                     <input
@@ -120,8 +122,9 @@ class CountryModalController extends ModalController {
                       id="multiple_choice_quiz_choice_C"
                       value="C"
                     />
-                    <label for="multiple_choice_quiz_choice_C">{tr('C')}</label>.
+                    <label for="multiple_choice_quiz_choice_C">
                     <span class="choiceC-text"></span>
+		    </label>
                   </div>
                   <div class="radio-list">
                     <input
@@ -130,8 +133,9 @@ class CountryModalController extends ModalController {
                       id="multiple_choice_quiz_choice_D"
                       value="D"
                     />
-                    <label for="multiple_choice_quiz_choice_D">{tr('D')}</label>.
+                    <label for="multiple_choice_quiz_choice_D">
                     <span class="choiceD-text"></span>
+		    </label>
                   </div>
                   <br />
                 </div>
