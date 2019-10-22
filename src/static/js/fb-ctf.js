@@ -921,6 +921,18 @@ function setupInputListeners() {
         $('.choiceB-text', $container).text(shuffledChoiceB);
         $('.choiceC-text', $container).text(shuffledChoiceC);
         $('.choiceD-text', $container).text(shuffledChoiceD);
+
+	// Hide empty choices
+	var hideEmpty = function(id, text){
+		if (text == '' || text == ' ')
+			$(id, $container).closest(".radio-list").hide().addClass('mdev-hidden');
+	}
+
+	hideEmpty('.choiceA-text', shuffledChoiceA);
+	hideEmpty('.choiceB-text', shuffledChoiceB);
+	hideEmpty('.choiceC-text', shuffledChoiceC);
+	hideEmpty('.choiceD-text', shuffledChoiceD);
+
         $('.wrong-answer-penalty', $container).text("Wrong Answer Penalty: " + wrong_answer_penalty);
         $('.number-incorrect-guesses', $container).text("Number of Incorrect Guesses: " + numIncorrectGuesses);
         //If already answered, disable the ability to submit again and change input to already answered.
