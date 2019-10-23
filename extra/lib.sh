@@ -47,7 +47,7 @@ function package() {
     log "$1 is already installed. skipping."
   else
     log "Installing $1"
-    sudo DEBIAN_FRONTEND=noninteractive apt-get install $1 -y --no-install-recommends
+    sudo DEBIAN_FRONTEND=noninteractive apt-get install $1 -y --no-install-recommends  --allow-unauthenticated
   fi
 }
 
@@ -232,7 +232,7 @@ function install_hhvm() {
   sudo DEBIAN_FRONTEND=noninteractive apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0x5a16e7281be7a449
 
   log "Adding HHVM repo"
-  sudo DEBIAN_FRONTEND=noninteractive add-apt-repository "deb http://dl.hhvm.com/ubuntu $(lsb_release -sc) main"
+  sudo DEBIAN_FRONTEND=noninteractive add-apt-repository "deb http://dl.hhvm.com/ubuntu $(lsb_release -sc)-lts-3.30 main"
 
   package_repo_update
 
